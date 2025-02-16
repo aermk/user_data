@@ -1,0 +1,32 @@
+@use "../variables.scss" as *;
+
+.bar {
+  margin-bottom: 15px;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  max-width: 400px;
+  background-color: $color-white;
+  padding: 8px 12px;
+  border-radius: $border-radius-common;
+  box-shadow: $box-shadow-common;
+  box-sizing: border-box;
+  gap: 5px;
+
+  .searchInput {
+    border: none;
+    outline: none;
+    font-size: $font-size-lg;
+    color: $color-grey-dark;
+    width: 100%;
+  }
+
+  .searchIcon {
+    width: 20px;
+    height: 20px;
+    color: $color-icon;
+    @extend %icon;
+  }
+}

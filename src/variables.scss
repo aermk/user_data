@@ -1,0 +1,36 @@
+$font-global: "Arial", "sans-serif";
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-grey-dark: #333333;
+$color-grey-light: #9b9b9b;
+$color-icon: #232222;
+$color-link: #007bff;
+$color-header-bg: #543781;
+$color-row-bg: #f3eefb9d;
+
+$font-size-base: 14px;
+$font-size-lg: 16px;
+
+$box-shadow-common: 0 2px 8px rgba(0, 0, 0, 0.15);
+$border-radius-common: 5px;
+$padding-cell: 12px 16px;
+
+%flexLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: $color-link;
+  text-decoration: none;
+}
+
+%icon {
+  flex-shrink: 0;
+  color: $color-icon;
+}
+
+%flexCell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

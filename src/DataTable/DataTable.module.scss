@@ -1,0 +1,94 @@
+@use "../variables" as *;
+
+.tableWrapper {
+  border-radius: $border-radius-common;
+  box-shadow: $box-shadow-common;
+  overflow-x: auto;
+
+  .dataTable {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      text-align: left;
+      white-space: nowrap;
+      padding: $padding-cell;
+    }
+
+    thead {
+      background-color: $color-header-bg;
+
+      th {
+        font-weight: 300;
+        font-size: $font-size-base;
+        text-transform: uppercase;
+        color: $color-white;
+        text-align: left;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    tbody {
+      tr:nth-child(even),
+      tr:hover {
+        background-color: $color-row-bg;
+      }
+
+      td {
+        font-size: $font-size-base;
+        color: $color-grey-dark;
+        padding: $padding-cell;
+
+        &.nameColumn {
+          font-size: $font-size-lg;
+          .userName {
+            color: $color-black;
+            font-weight: 600;
+          }
+
+          .userUsername {
+            color: $color-grey-light;
+            margin-left: 4px;
+          }
+        }
+        &.addressColumn {
+          font-size: $font-size-base;
+          color: $color-grey-dark;
+
+          address {
+            font-style: normal;
+            @extend %flexCell;
+
+            span {
+              display: block;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+        &.contactContainer {
+          address {
+            @extend %flexCell;
+
+            a {
+              @extend %flexLink;
+            }
+          }
+        }
+        &.websiteContainer {
+          a {
+            @extend %flexLink;
+          }
+        }
+      }
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        @extend %icon;
+      }
+    }
+  }
+}
