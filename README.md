@@ -13,15 +13,15 @@ The user data is fetched from https://jsonplaceholder.typicode.com/users
 
 This table includes:
 
-* `name` 
-* `username`
-* `email`
-* `address` - excluding `geo`.
-* `phone` 
-* `website`
-* `company` - `name` and `catchPhrase` only.
+- `name`
+- `username`
+- `email`
+- `address` - excluding `geo`.
+- `phone`
+- `website`
+- `company` - `name` and `catchPhrase` only.
 
-These data points are in some cases combined under the same column, if it fits logically; for example, the emails and phones under the *Contact Details* column.
+These data points are in some cases combined under the same column, if it fits logically; for example, the emails and phones under the _Contact Details_ column.
 
 Contact details are clickable using `mailto:` and `tel:`.
 
@@ -39,6 +39,7 @@ npm run dev
 - React + Vite
 - TypeScript
 - SCSS
+- HTML
 
 ## Demo link
 
