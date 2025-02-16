@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# User Data Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About app
 
-Currently, two official plugins are available:
+This is an application that displays user data in a table.
+The table is automatically sorted alphabetically by `name` in ascending order.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can filter the user table by company name using the searchbox.
 
-## Expanding the ESLint configuration
+## Data
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The user data is fetched from https://jsonplaceholder.typicode.com/users
 
-- Configure the top-level `parserOptions` property like this:
+This table includes:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+* `name` 
+* `username`
+* `email`
+* `address` - excluding `geo`.
+* `phone` 
+* `website`
+* `company` - `name` and `catchPhrase` only.
+
+These data points are in some cases combined under the same column, if it fits logically; for example, the emails and phones under the *Contact Details* column.
+
+Contact details are clickable using `mailto:` and `tel:`.
+
+## Installation
+
+```sh
+git clone https://github.com/aermk/user_data.git
+cd user_data
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Built With
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- React + Vite
+- TypeScript
+- SCSS
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Demo link
+
+https://aermk.github.io/user_data
