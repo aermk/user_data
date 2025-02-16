@@ -28,13 +28,20 @@ const UserData: FC<userDataPropsType> = ({
 }) => {
   return (
     <tr key={id}>
-      <td className={styles.nameColumn}>
+      <td className={styles.nameContainer}>
         <span className={styles.userName}>{name}</span>
         <span className={styles.userUsername}>/ {username}</span>
       </td>
-      <td>{company.name}</td>
-      <td className={styles.addressColumn}>
-        {/* {!!user.address && ( */}
+      <td className={styles.companyContainer}>
+        {/* {!!company && ( */}
+        <p itemProp="name">{company.name}</p>
+        <p itemProp="slogan" className={styles.companyCatchPhrase}>
+          {`"${company.catchPhrase}"`}
+        </p>
+        {/* )} */}
+      </td>
+      <td className={styles.addressContainer}>
+        {/* {!!address && ( */}
         <address>
           <span>
             {address.street}, {address.suite}

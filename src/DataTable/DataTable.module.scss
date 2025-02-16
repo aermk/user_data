@@ -40,7 +40,7 @@
         color: $color-grey-dark;
         padding: $padding-cell;
 
-        &.nameColumn {
+        &.nameContainer {
           font-size: $font-size-lg;
           .userName {
             color: $color-black;
@@ -52,7 +52,17 @@
             margin-left: 4px;
           }
         }
-        &.addressColumn {
+        &.companyContainer {
+          @extend %flexCell;
+          p {
+            margin: 0;
+            &.companyCatchPhrase {
+              font-style: italic;
+              color: $color-grey-light;
+            }
+          }
+        }
+        &.addressContainer {
           font-size: $font-size-base;
           color: $color-grey-dark;
 
