@@ -8,12 +8,15 @@
   .dataTable {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 
     th,
     td {
       text-align: left;
-      white-space: nowrap;
+      white-space: normal;
       padding: $padding-cell;
+      min-width: 100px;
+      width: 250px;
     }
 
     thead {
